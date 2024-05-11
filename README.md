@@ -10,4 +10,4 @@ Functions:
 
 q. Quit
 
-Store entire files!
+Storing files still beta!
