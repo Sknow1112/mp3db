@@ -7,6 +7,7 @@ Functions:
 3. Print all entries
 4. Add a file
 5. Download a file
+
 q. Quit
 
 Store entire files!
