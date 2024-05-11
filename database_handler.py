@@ -1,6 +1,7 @@
 import wave
 import struct
 import os
+import base64
 
 class Database:
     def __init__(self, filename):
@@ -56,11 +57,11 @@ class Database:
         print("File not found in the database.")
 
     def encode_file_data(self, file_data):
-        encoded_data = "".join(chr(byte) for byte in file_data)
+        encoded_data = base64.b64encode(file_data).decode("utf-8")
         return encoded_data
 
     def decode_file_data(self, encoded_data):
-        file_data = bytes(ord(char) for char in encoded_data)
+        file_data = base64.b64decode(encoded_data)
         return file_data
 
     def search_entries(self, search_term):
